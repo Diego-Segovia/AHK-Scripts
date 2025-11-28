@@ -33,17 +33,17 @@ GenerateGrid(ThisHotkey)
     }
 
     TotalTriggerTextLength := StrLen(TriggerText) + StrLen(Count) + 1
-    SendInput("{BS " . TotalTriggerTextLength . "}") ; Backspace triggering text
+    SendInput("{BS " TotalTriggerTextLength "}") ; Backspace triggering text
 
     GenerateGridXAML(GridDefinitionType, Count)
 }
 
 GenerateGridXAML(TagType, Count) {
     Send("<Grid>{Enter}")
-    Send("<Grid." . TagType . "Definitions>{Enter}")
+    Send("<Grid." TagType "Definitions>{Enter}")
 
     Loop Count {
-        Send("<" . TagType . "Definition />")
+        Send("<" TagType "Definition />")
         if (A_Index < Count) {
             Send("{Enter}")
         }
