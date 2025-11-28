@@ -33,7 +33,7 @@ GenerateGrid(ThisHotkey)
     }
 
     TotalTriggerTextLength := StrLen(TriggerText) + StrLen(Count) + 1
-    SendEvent("{BS " . TotalTriggerTextLength . "}") ; Backspace triggering text
+    SendInput("{BS " . TotalTriggerTextLength . "}") ; Backspace triggering text
 
     GenerateGridXAML(GridDefinitionType, Count)
 }
