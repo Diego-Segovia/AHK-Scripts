@@ -4,12 +4,12 @@
 #HotIf WinActive("ahk_exe devenv.exe")
 
 Loop 12 {
-    Hotstring(":O:xgridcol" . A_Index, GenerateColumns.Bind(A_Index))
+    Hotstring(":O:grid.col" . A_Index, GenerateColumns.Bind(A_Index))
 }
 
 GenerateColumns(colCount, *) {
     Send("<Grid>{Enter}")
-    Sleep(50) 
+    Sleep(50)
 
     Send("<Grid.ColumnDefinitions>{Enter}")
     Sleep(50)
