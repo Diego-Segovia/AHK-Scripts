@@ -1,13 +1,15 @@
 ﻿#Requires AutoHotkey v2.0
 #SingleInstance Force
 
-#HotIf WinActive("ahk_exe devenv.exe") ; Only trigger when Visual Studio is running
+HotIf (*) => WinActive("ahk_exe devenv.exe") ; Only trigger when Visual Studio is running
 
 ; :B0*: means:
 ; B0 = Do NOT backspace the trigger text automatically
 ; * = Fire immediately (don't wait for an ending char to trigger the hook start)
 Hotstring(":B0*:grid.row", GenerateGrid)
 Hotstring(":B0*:grid.col", GenerateGrid)
+
+HotIf
 
 GenerateGrid(thisHotkey)
 {
@@ -51,5 +53,3 @@ GenerateGridXAML(tagType, count) {
 
     Send("{Down}{End}{Enter}")
 }
-
-#HotIf

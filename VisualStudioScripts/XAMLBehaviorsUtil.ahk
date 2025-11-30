@@ -1,12 +1,14 @@
 ﻿#Requires AutoHotkey v2.0
 #SingleInstance Force
 
-#HotIf WinActive("ahk_exe devenv.exe") ; Only trigger when Visual Studio is running
+HotIf (*) => WinActive("ahk_exe devenv.exe") ; Only trigger when Visual Studio is running
 
 ; :B0*: means:
 ; B0 = Do NOT backspace the trigger text automatically
 ; * = Fire immediately (don't wait for an ending char to trigger the hook start)
 Hotstring(":B0*:i", GenerateInteractionTrigger)
+
+HotIf
 
 GenerateInteractionTrigger(thisHotkey)
 {
@@ -32,5 +34,3 @@ GenerateInteractionTrigger(thisHotkey)
     Send('<i:EventTrigger EventName="' eventMethodName[2] '">{Enter}')
     Send('<cal:ActionMessage MethodName="' eventMethodName[3] '" />')
 }
-
-#HotIf

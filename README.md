@@ -76,7 +76,7 @@ To create a grid with <strong>2 rows</strong>, type <kbd>grid.row2</kbd> and pre
 
 ---
 
-<h2>Lorem Ipsum Generator</h2>
+## Lorem Ipsum Generator
 
 <table border="1" cellpadding="10" cellspacing="0">
   <thead>
@@ -112,3 +112,7 @@ Type <kbd>lorem20</kbd> and press ending key.
 <blockquote>
 Lorem ipsum dolor sit amet consectetur adipiscing elit sed, do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim.
 </blockquote>
+
+---
+
+## XAML<i:Interaction.Triggers><i:Interaction.>
