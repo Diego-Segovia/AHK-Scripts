@@ -47,7 +47,7 @@ Note: You can perform action by pressing one of the following ending keys: <kbd>
   </tbody>
 </table>
 
-<h3>Usage Example</h3>
+#### Usage Example
 
 <p><strong>1. Columns</strong><br>
 To create a grid with <strong>3 columns</strong>, type <kbd>grid.col3</kbd> and press ending key.</p>
@@ -76,7 +76,7 @@ To create a grid with <strong>2 rows</strong>, type <kbd>grid.row2</kbd> and pre
 
 ---
 
-## Lorem Ipsum Generator
+### Lorem Ipsum Generator
 
 <table border="1" cellpadding="10" cellspacing="0">
   <thead>
@@ -95,7 +95,7 @@ To create a grid with <strong>2 rows</strong>, type <kbd>grid.row2</kbd> and pre
   </tbody>
 </table>
 
-### Usage Example
+#### Usage Example
 
 <p><strong>1. Short Phrase</strong><br>
 Type <kbd>lorem5</kbd> and press ending key.
@@ -115,4 +115,33 @@ Lorem ipsum dolor sit amet consectetur adipiscing elit sed, do eiusmod tempor in
 
 ---
 
-## XAML<i:Interaction.Triggers><i:Interaction.>
+### XAML Interaction Trigger
+
+<table border="1" cellpadding="10" cellspacing="0">
+  <thead>
+    <tr>
+      <th>Feature</th>
+      <th>Trigger Command</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Event Trigger Snippet</strong></td>
+      <td><kbd>i</kbd> + <kbd>{event type}</kbd> + <kbd>{method name}</kbd></td>
+      <td>Generates event trigger snippet with EventName as <code>{event type}</code> and MethodName as <code>{method name}</code>.</td>
+    </tr>
+  </tbody>
+</table>
+
+#### Usage Example
+
+Type <kbd>i.Click.Save</kbd> and press ending key.
+
+<p><strong>Output:</strong></p>
+<pre><code class="language-xml">&lt;i:Interaction.Triggers&gt;
+    &lt;i:EventTrigger EventName="Click"&gt;
+        &lt;cal:ActionMessage MethodName="Save" /&gt;
+    &lt;/i:EventTrigger&gt;
+&lt;/i:Interaction.Triggers&gt;
+</code></pre>
