@@ -9,42 +9,42 @@
 Hotstring(":B0*:grid.row", GenerateGrid)
 Hotstring(":B0*:grid.col", GenerateGrid)
 
-GenerateGrid(ThisHotkey)
+GenerateGrid(thisHotkey)
 {
-    TriggerText := StrSplit(ThisHotkey, ":")[3]
-    GridDefinitionType := (TriggerText == "grid.row") ? "Row" : "Column"
+    triggerText := StrSplit(thisHotkey, ":")[3]
+    gridDefinitionType := (triggerText == "grid.row") ? "Row" : "Column"
 
     ; V = Visible (you see the number as you type it)
-    InputListener := InputHook("V")
+    inputListener := InputHook("V")
 
     ; S = Supress keys so Visual Studio doesn't perform actions related to key press
     ; E = Tell input hook that keys are End Keys so Wait() ends
-    InputListener.KeyOpt("{Space}{Enter}{Tab}", "E S")
+    inputListener.KeyOpt("{Space}{Enter}{Tab}", "E S")
 
-    InputListener.Start()
-    InputListener.Wait() ; Wait for user to press ending character
+    inputListener.Start()
+    inputListener.Wait() ; Wait for user to press ending character
 
-    Count := InputListener.Input
-    EndKey := InputListener.EndKey ; capture which key finished the input
+    count := inputListener.Input
+    endKey := inputListener.EndKey ; capture which key finished the input
 
-    if !IsInteger(Count) {
-        Send("{" EndKey "}")
+    if !IsInteger(count) {
+        Send("{" endKey "}")
         return
     }
 
-    TotalTriggerTextLength := StrLen(TriggerText) + StrLen(Count) + 1
-    SendInput("{BS " TotalTriggerTextLength "}") ; Backspace triggering text
+    totalTriggerTextLength := StrLen(triggerText) + StrLen(count) + 1
+    SendInput("{BS " totalTriggerTextLength "}") ; Backspace triggering text
 
-    GenerateGridXAML(GridDefinitionType, Count)
+    GenerateGridXAML(gridDefinitionType, count)
 }
 
-GenerateGridXAML(TagType, Count) {
+GenerateGridXAML(tagType, count) {
     Send("<Grid>{Enter}")
-    Send("<Grid." TagType "Definitions>{Enter}")
+    Send("<Grid." tagType "Definitions>{Enter}")
 
-    Loop Count {
-        Send("<" TagType "Definition />")
-        if (A_Index < Count) {
+    Loop count {
+        Send("<" tagType "Definition />")
+        if (A_Index < count) {
             Send("{Enter}")
         }
     }
