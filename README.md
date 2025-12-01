@@ -76,6 +76,39 @@ To create a grid with <strong>2 rows</strong>, type <kbd>grid.row2</kbd> and pre
 
 ---
 
+### XAML Interaction Trigger
+
+<table border="1" cellpadding="10" cellspacing="0">
+  <thead>
+    <tr>
+      <th>Feature</th>
+      <th>Trigger Command</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Event Trigger Snippet</strong></td>
+      <td><kbd>i</kbd> + <kbd>{event type}</kbd> + <kbd>{method name}</kbd></td>
+      <td>Generates event trigger snippet with EventName as <code>{event type}</code> and MethodName as <code>{method name}</code>.</td>
+    </tr>
+  </tbody>
+</table>
+
+#### Usage Example
+
+Type <kbd>i.Click.Save</kbd> and press ending key.
+
+<p><strong>Output:</strong></p>
+<pre><code class="language-xml">&lt;i:Interaction.Triggers&gt;
+    &lt;i:EventTrigger EventName="Click"&gt;
+        &lt;cal:ActionMessage MethodName="Save" /&gt;
+    &lt;/i:EventTrigger&gt;
+&lt;/i:Interaction.Triggers&gt;
+</code></pre>
+
+---
+
 ### Lorem Ipsum Generator
 
 <table border="1" cellpadding="10" cellspacing="0">
@@ -112,36 +145,3 @@ Type <kbd>lorem20</kbd> and press ending key.
 <blockquote>
 Lorem ipsum dolor sit amet consectetur adipiscing elit sed, do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim.
 </blockquote>
-
----
-
-### XAML Interaction Trigger
-
-<table border="1" cellpadding="10" cellspacing="0">
-  <thead>
-    <tr>
-      <th>Feature</th>
-      <th>Trigger Command</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>Event Trigger Snippet</strong></td>
-      <td><kbd>i</kbd> + <kbd>{event type}</kbd> + <kbd>{method name}</kbd></td>
-      <td>Generates event trigger snippet with EventName as <code>{event type}</code> and MethodName as <code>{method name}</code>.</td>
-    </tr>
-  </tbody>
-</table>
-
-#### Usage Example
-
-Type <kbd>i.Click.Save</kbd> and press ending key.
-
-<p><strong>Output:</strong></p>
-<pre><code class="language-xml">&lt;i:Interaction.Triggers&gt;
-    &lt;i:EventTrigger EventName="Click"&gt;
-        &lt;cal:ActionMessage MethodName="Save" /&gt;
-    &lt;/i:EventTrigger&gt;
-&lt;/i:Interaction.Triggers&gt;
-</code></pre>
