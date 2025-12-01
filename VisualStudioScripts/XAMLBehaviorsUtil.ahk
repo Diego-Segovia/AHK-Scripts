@@ -1,14 +1,12 @@
 ﻿#Requires AutoHotkey v2.0
 #SingleInstance Force
 
-HotIf (*) => WinActive("ahk_exe devenv.exe") ; Only trigger when Visual Studio is running
+HotIf (*) => WinActive("ahk_exe devenv.exe") ; Only trigger when Visual Studio has focus
 
 ; :B0*: means:
 ; B0 = Do NOT backspace the trigger text automatically
 ; * = Fire immediately (don't wait for an ending char to trigger the hook start)
 Hotstring(":B0*:i", GenerateInteractionTrigger)
-
-HotIf
 
 GenerateInteractionTrigger(thisHotkey)
 {
@@ -25,12 +23,32 @@ GenerateInteractionTrigger(thisHotkey)
     inputListener.Wait() ; Wait for user to press ending character
 
     userInput := inputListener.Input
+    endKey := inputListener.EndKey ; capture which key finished the input
+
+    if (userInput = "") {
+        Send("{" endKey "}")
+        return
+    }
+
     eventMethodName := StrSplit(userInput, ".")
+
+    if (eventMethodName.Length != 3) {
+        Send("{" endKey "}")
+        return
+    }
+
+    eventType := eventMethodName[2]
+    methodName := eventMethodName[3]
+
+    if (eventType == "" || methodName == "") {
+        Send("{" endKey "}")
+        return
+    }
 
     totalTriggerTextLength := StrLen(triggerText) + StrLen(userInput) + 1
     SendInput("{BS " totalTriggerTextLength "}") ; Backspace triggering text
 
     Send("<i:Interaction.Triggers>{Enter}")
-    Send('<i:EventTrigger EventName="' eventMethodName[2] '">{Enter}')
-    Send('<cal:ActionMessage MethodName="' eventMethodName[3] '" />')
+    Send('<i:EventTrigger EventName="' eventType '">{Enter}')
+    Send('<cal:ActionMessage MethodName="' methodName '" />')
 }
