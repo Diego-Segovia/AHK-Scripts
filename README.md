@@ -1,5 +1,11 @@
 # AutoHotKeys Scripts
 
+### Download AutoHotkeys
+https://www.autohotkey.com/download/ahk-v2.exe
+
+### Adding Scripts
+Add AHK-Scripts folder to AutoHotkey in the Documents folder
+
 ### Set Scripts to Run on Windows Start Up
 
 1. Create a Shortcut
