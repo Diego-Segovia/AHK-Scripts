@@ -1,12 +1,15 @@
 # AutoHotKeys Scripts
 
 ### Download AutoHotkeys
+
 [AutoHotkey Download](https://www.autohotkey.com/download/ahk-v2.exe)
 
 ### Download Scripts
+
 [Scripts Download](https://github.com//Diego-Segovia/AHK-Scripts/archive/refs/tags/v1.zip)
 
 ### Adding Scripts
+
 Add AHK-Scripts folder to AutoHotkey in the Documents folder
 
 ### Set Scripts to Run on Windows Start Up
@@ -31,6 +34,11 @@ Add AHK-Scripts folder to AutoHotkey in the Documents folder
 ## Visual Studio Scripts
 
 Note: You can perform action by pressing one of the following ending keys: <kbd>Enter</kbd> , <kbd>Space</kbd> , or <kbd>Tab</kbd>
+
+### Quality of Life When Using Visual Studio
+
+- Press middle mouse button to run project
+- Using <kbd>Ctrl</kbd> + <kbd>S</kbd> will trigger document formatting. (This allows XAML files to be formatted on save which in not provided by Visual Studio out of box).
 
 ### XAML Grid Utility
 
