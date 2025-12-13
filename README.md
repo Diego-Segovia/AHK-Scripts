@@ -1,7 +1,10 @@
 # AutoHotKeys Scripts
 
 ### Download AutoHotkeys
-https://www.autohotkey.com/download/ahk-v2.exe
+[AutoHotkey Download](https://www.autohotkey.com/download/ahk-v2.exe)
+
+### Download Scripts
+[Scripts Download](https://github.com//Diego-Segovia/AHK-Scripts/archive/refs/tags/v1.zip)
 
 ### Adding Scripts
 Add AHK-Scripts folder to AutoHotkey in the Documents folder
