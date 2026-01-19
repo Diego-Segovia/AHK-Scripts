@@ -8,5 +8,6 @@ Run "VisualStudioScripts\MiddleMouseBtnF5.ahk"
 Run "VisualStudioScripts\XAMLBehaviorsUtil.ahk"
 Run "VisualStudioScripts\XAMLGridGenerationUtil.ahk"
 Run "VisualStudioScripts\FormatOnSave.ahk"
+Run "SSMS-Scripts\MiddleMouseBtnExecuteSQL.ahk"
 
 ExitApp
