@@ -25,7 +25,7 @@ Add AHK-Scripts folder to AutoHotkey in the Documents folder
 - Type the following command into the text box:
   **shell:startup**
 - Press <kbd>Enter</kbd> or click OK.
-  (A File Explorer window will open displaying the Startup directory).
+  (A File Explorer window will open, displaying the Startup directory).
 
 3. Move the Shortcut here
 
@@ -33,12 +33,12 @@ Add AHK-Scripts folder to AutoHotkey in the Documents folder
 
 ## Visual Studio Scripts
 
-Note: You can perform action by pressing one of the following ending keys: <kbd>Enter</kbd> , <kbd>Space</kbd> , or <kbd>Tab</kbd>
+Note: You can perform an action by pressing one of the following ending keys: <kbd>Enter</kbd>, <kbd>Space</kbd>, or <kbd>Tab</kbd>
 
 ### Quality of Life When Using Visual Studio
 
-- Press middle mouse button to run project
-- Using <kbd>Ctrl</kbd> + <kbd>S</kbd> will trigger document formatting. (This allows XAML files to be formatted on save which in not provided by Visual Studio out of box).
+- Press the middle mouse button to run the project
+- Using <kbd>Ctrl</kbd> + <kbd>S</kbd> will trigger document formatting. (This allows XAML files to be formatted on save, which is not provided by Visual Studio out of the box).
 
 ### XAML Grid Utility
 
