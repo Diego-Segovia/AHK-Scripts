@@ -31,6 +31,10 @@ Add AHK-Scripts folder to AutoHotkey in the Documents folder
 
 ---
 
+💡 Scripts can be ran manually be double clicking on them.
+
+---
+
 ## Visual Studio Scripts
 
 Note: You can perform an action by pressing one of the following ending keys: <kbd>Enter</kbd>, <kbd>Space</kbd>, or <kbd>Tab</kbd>
